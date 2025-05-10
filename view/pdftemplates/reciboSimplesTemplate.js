@@ -1,4 +1,4 @@
-function arquivopdf (contentpdf){ return`<!DOCTYPE html>
+export default function reciboSimplesTemplate (contentReciboSimples){ return`<!DOCTYPE html>
 <html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@ function arquivopdf (contentpdf){ return`<!DOCTYPE html>
 </head>
 <body>
     <div class="div-comprovante">
-    <h2>${contentpdf.nomeEmpresa}</h2>
+    <h2>${contentReciboSimples.nomeEmpresa}</h2>
     <div class="div-lista">
     <ul>
         <li>Nome:</li>
@@ -18,12 +18,12 @@ function arquivopdf (contentpdf){ return`<!DOCTYPE html>
         <li>Vendedor:</li>
     </ul>
     <ul>
-        <li>${contentpdf.nomeCliente}</li>
-        <li>${contentpdf.nomeProduto}</li>
-        <li>R$${contentpdf.valorProduto}</li>
-        <li>${contentpdf.formaPagamento}</li>
-        <li>${contentpdf.formaParcelas}</li>
-        <li>${contentpdf.nomeVendedor}</li>
+        <li>${contentReciboSimples.nomeCliente}</li>
+        <li>${contentReciboSimples.nomeProduto}</li>
+        <li>R$${contentReciboSimples.valorProduto}</li>
+        <li>${contentReciboSimples.formaPagamento}</li>
+        <li>${contentReciboSimples.formaParcelas}</li>
+        <li>${contentReciboSimples.nomeVendedor}</li>
     </ul>
 </div>
 </div>
@@ -139,4 +139,3 @@ li{
 </style>
 </html>`
 }
-export default arquivopdf

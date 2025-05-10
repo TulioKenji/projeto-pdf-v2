@@ -10,7 +10,7 @@ async function sendpdf(event){
         nomeVendedor: event.target.nomeVendedor.value
     }
     
-    const response = await fetch('http://localhost:3000/pdf', {
+    const response = await fetch('http://localhost:3000/recibosimples', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
